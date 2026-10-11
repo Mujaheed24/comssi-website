@@ -2,7 +2,7 @@
 Run from anywhere:  python3 tools/build_shell.py   (safe to re-run)"""
 import re, glob, os
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-PH, MAIL = "+2348037115519", "dgrassroot@yahoo.com"
+PH, MAIL, ALT_MAIL = "+2348037115519", "info@comssi.org", "dgrassroot@yahoo.com"
 IDS_EN = ["budget","education","health","trafficking","livelihoods","agribusiness","rights","training"]
 L = {
  "en": dict(menu="Menu", tag="Social Accountability Initiative", about="About", work="What we do", tr="Track record",
@@ -33,7 +33,7 @@ def parts(kind, fname):
            f'<li><a href="{P["res"]}"{cur("res")}>{t["res"]}</a></li><li><a href="{P["gal"]}"{cur("gal")}>{t["gal"]}</a></li>'
            f'<li class="lang-li">{lang_sw}</li><li><a class="btn btn-dark" href="{P["con"]}"{cur("con")}>{t["con"]}</a></li></ul>')
     header = ('<!--H--><div class="util"><div class="wrap"><span>'
-      f'<a href="tel:{PH}">+234 803 711 5519</a><a href="mailto:{MAIL}">{MAIL}</a></span>{lang_sw}</div></div>'
+      f'<a href="tel:{PH}">+234 803 711 5519</a><a href="mailto:{MAIL}">{MAIL}</a><a href="mailto:{ALT_MAIL}">{ALT_MAIL}</a></span>{lang_sw}</div></div>'
       f'<header class="site-header"><div class="wrap bar"><a class="brand" href="{P["home"]}"><img src="{P["a"]}images/brand/comssi-logo.png" alt="COMSSI" width="44" height="44">'
       f'<span>COMSSI<small>{t["tag"]}</small></span></a><button class="menu-btn" aria-expanded="false" aria-controls="nav">{t["menu"]}</button>'
       f'<nav id="nav" aria-label="{t["nav"]}">{nav}</nav></div><div class="progress" aria-hidden="true"></div></header><!--/H-->')
@@ -43,7 +43,7 @@ def parts(kind, fname):
     footer = (f'<!--F--><footer><div class="wrap f-main"><div class="f-grid"><div class="f-brand"><img src="{P["a"]}images/brand/comssi-logo.png" alt="" width="56" height="56" loading="lazy">'
       f'<p>{t["mission"]}</p></div><div><h3>{t["ex"]}</h3><ul>{fl}</ul></div><div><h3>{t["pr"]}</h3><ul>{fp}</ul></div>'
       f'<div><h3>{t["rc"]}</h3><ul><li>{t["addr"]}</li><li><a href="tel:{PH}">+234 803 711 5519</a></li><li><a href="tel:+2348037877859">+234 803 787 7859</a></li>'
-      f'<li><a href="mailto:{MAIL}">{MAIL}</a></li></ul></div></div><!-- TODO: social media links --></div>'
+      f'<li><a href="mailto:{MAIL}">{MAIL}</a></li><li><a href="mailto:{ALT_MAIL}">{ALT_MAIL}</a></li></ul></div></div><!-- TODO: social media links --></div>'
       f'<div class="wrap f-legal"><span>© 2026 Community Support for Social Accountability Initiative (COMSSI) · CAC/IT/NO81968 · {t["legal"]}</span><a href="#main">{t["top"]}</a></div></footer>'
       f'<div class="action-bar"><a href="tel:{PH}">{t["call"]}</a><a href="https://wa.me/{PH[1:]}">{t["wa"]}</a></div><!--/F-->')
     return header, footer

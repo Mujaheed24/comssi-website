@@ -452,7 +452,7 @@ if (form) {
     summary.classList.remove("show");
     const d = new FormData(form);
     location.href =
-      "mailto:dgrassroot@yahoo.com?subject=" +
+      "mailto:info@comssi.org?subject=" +
       encodeURIComponent("Message from COMSSI website") +
       "&body=" +
       encodeURIComponent(
